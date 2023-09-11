@@ -17,11 +17,11 @@ AdvancedBounty is a feature-rich bounty hunting plugin for PocketMine-MP that al
 
 1. Download the latest plugin release from the [Releases](https://github.com/iLVOEWOCK/AdvancedBounty) section.
 2. Place the downloaded `AdvancedBounty.phar` file in your PocketMine-MP server's `plugins` folder.
-3. Restart your server or use the `/reload` command to load the plugin.
+3. Restart your server to load the plugin.
 
 ## Usage
 
-- To place a bounty on a player, use `/bounty <player-name> <amount>`.
+- To place a bounty on a player, use `/bounty add <player-name> <amount>`.
 - Players with bounties can be hunted down by others to claim the reward.
 - Use `/bountyhelp` in-game to access the plugin's command help.
 
