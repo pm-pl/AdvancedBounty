@@ -86,7 +86,7 @@ class Utils {
             if ($seconds >= $value) {
                 $amount = floor($seconds / $value);
                 $seconds %= $value;
-                $parts[] = $amount . ' ' . ($amount === 1 ? $unit : $unit . 's');
+                $parts[] = $amount . ' ' . ($amount == 1 ? $unit : $unit . 's');
             }
         }
 
