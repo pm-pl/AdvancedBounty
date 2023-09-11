@@ -29,4 +29,8 @@ You can customize the plugin's behavior by editing the `config.yml` file located
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-For more information and support, visit our [GitHub repository]([https://link-to-your-github-repo](https://github.com/iLVOEWOCK)) or contact us on [Discord](https://discord.gg/RpKPSep3).
+For more information and support, visit our [GitHub repository](https://github.com/iLVOEWOCK/AdvancedBounty) or contact us on [Discord](https://discord.gg/RpKPSep3).
+
+## Icon
+
+<a href="https://www.freepik.com/icon/wanted_827170#fromView=search&term=bounty&page=1&position=19">Icon by Freepik</a>
