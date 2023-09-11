@@ -1,0 +1,9 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/iLVOEWOCK/AdvancedBounty
+build-by-default: true
+branches:
+- main
+projects:
+  AdvancedBounty:
+    path: ""
+    icon: "icon.png"
+...
