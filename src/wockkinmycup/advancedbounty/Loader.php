@@ -23,6 +23,12 @@ class Loader extends PluginBase {
         foreach ($this->getResources() as $resource) {
             $this->saveResource($resource->getFilename());
         }
+        $resourceSubdirectory = "data/";
+        $resourceFiles = glob($this->getFile() . "resources/" . $resourceSubdirectory . "*");
+        foreach ($resourceFiles as $resourceFile) {
+            $resourceName = basename($resourceFile);
+            $this->saveResource($resourceSubdirectory . $resourceName);
+        }
         $this->saveDefaultConfig();
         $this->registerCommands();
     }
