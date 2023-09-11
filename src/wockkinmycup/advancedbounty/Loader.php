@@ -5,8 +5,6 @@ namespace wockkinmycup\advancedbounty;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use wockkinmycup\advancedbounty\Commands\BountyCommand;
-use wockkinmycup\advancedbounty\Utils\BountyManager;
-use wockkinmycup\advancedbounty\Utils\Utils;
 
 class Loader extends PluginBase {
 
@@ -21,6 +19,7 @@ class Loader extends PluginBase {
 
     public function onEnable(): void
     {
+        $this->registerListeners();
         foreach ($this->getResources() as $resource) {
             $this->saveResource($resource->getFilename());
         }
@@ -37,7 +36,7 @@ class Loader extends PluginBase {
     public function registerListeners() {
         $pluginMgr = $this->getServer()->getPluginManager();
 
-
+        $pluginMgr->registerEvents(new BountyListener(), $this);
     }
 
     public static function getInstance() : Loader {
