@@ -1,5 +1,9 @@
 # AdvancedBounty Plugin for PocketMine-MP
 
+[![](https://poggit.pmmp.io/shield.state/AdvancedBounty)](https://poggit.pmmp.io/p/AdvancedBounty)
+<a href="https://poggit.pmmp.io/p/AdvancedBounty"><img src="https://poggit.pmmp.io/shield.state/AdvancedBounty"></a> [![](https://poggit.pmmp.io/shield.api/AdvancedBounty)](https://poggit.pmmp.io/p/AdvancedBounty)
+<a href="https://poggit.pmmp.io/p/AdvancedBounty"><img src="https://poggit.pmmp.io/shield.api/AdvancedBounty"></a>
+
 AdvancedBounty is a feature-rich bounty hunting plugin for PocketMine-MP that allows players to place and collect bounties on other players. With AdvancedBounty, you can add an exciting new dimension to your PocketMine server's gameplay.
 
 ## Features
