@@ -19,6 +19,12 @@ class Loader extends PluginBase {
 
     public function onEnable(): void
     {
+        $bedrockEconomy = $this->getServer()->getPluginManager()->getPlugin("BedrockEconomy");
+
+        if (!$bedrockEconomy == null) {
+            $this->getLogger()->notice("BedrockEconomy found. Enabling AdvancedBounty.");
+            return;
+        }
         $this->registerListeners();
         foreach ($this->getResources() as $resource) {
             $this->saveResource($resource->getFilename());
@@ -35,7 +41,7 @@ class Loader extends PluginBase {
 
     public function registerCommands() {
         $this->getServer()->getCommandMap()->registerAll("advancedbounty", [
-            new BountyCommand()
+            new BountyCommand($this)
         ]);
     }
 
