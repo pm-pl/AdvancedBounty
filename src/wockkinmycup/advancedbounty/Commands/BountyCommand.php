@@ -90,15 +90,21 @@ class BountyCommand extends Command
                 $targetPlayerName = array_shift($args);
                 $targetPlayer = Utils::customGetPlayerByPrefix($targetPlayerName);
                 if ($targetPlayer === null) {
-                    $sender->sendMessage("§r§l§c[!] §r§cPlayer '$targetPlayerName' not found or is not online.");
+                    $notFoundMessage = Utils::getConfigurations("messages")->get("not-found", "§r§l§c[!] §r§cPlayer '{target_player}' not found or is not online.");
+                    $notFoundMessage = str_replace("{target_player}", $targetPlayerName, $notFoundMessage);
+                    $sender->sendMessage(TextFormat::colorize($notFoundMessage));
                 } else {
                     $targetPlayerBounty = $bountyManager->getBounty($targetPlayer->getName());
                     if ($targetPlayerBounty <= 0) {
-                        $sender->sendMessage("§r§l§c[!] §r§c'$targetPlayerName' does not have a bounty.");
+                        $noBountyMessage = Utils::getConfigurations("messages")->get("remove.no-bounty", "§r§l§c[!] §r§c'{target}' does not have a bounty.");
+                        $noBountyMessage = str_replace("{target}", $targetPlayerName, $noBountyMessage);
+                        $sender->sendMessage(TextFormat::colorize($noBountyMessage));
                     } else {
                         $bountyManager->removeBounty($targetPlayer->getName());
 
-                        $sender->sendMessage("§r§l§a[!] §r§aBounty for '$targetPlayerName' has been removed.");
+                        $removedMessage = Utils::getConfigurations("messages")->get("remove.removed", "§r§l§a[!] §r§aBounty for '{target}' has been removed.");
+                        $removedMessage = str_replace("{target}", $targetPlayerName, $removedMessage);
+                        $sender->sendMessage(TextFormat::colorize($removedMessage));
                     }
                 }
                 break;
