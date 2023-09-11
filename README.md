@@ -25,6 +25,14 @@ AdvancedBounty is a feature-rich bounty hunting plugin for PocketMine-MP that al
 
 You can customize the plugin's behavior by editing the `config.yml` file located in the plugin's folder. Modify settings such as bounty tax, and more to suit your server's gameplay style.
 
+## Todo
+
+[ ] Implement mysql
+[ ] Make mysql optional
+[ ] use libasynql or something to make the querys async (i myself will not be doing this.)
+[ ] Make it so server owners can disable self claiming bounties.
+[ ] Possible introduction to GUi's or Forms (i just dont want to have to use a composer cuz i suck at that stuff
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
