@@ -7,18 +7,22 @@ use cooldogedev\BedrockEconomy\BedrockEconomy;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\utils\TextFormat;
 use wockkinmycup\advancedbounty\Loader;
 use wockkinmycup\advancedbounty\Utils\BountyManager;
 use wockkinmycup\advancedbounty\Utils\Utils;
 
-class BountyCommand extends Command
+class BountyCommand extends Command implements PluginOwned
 {
 
-    public function __construct()
+    public Loader $plugin;
+    
+    public function __construct(Loader $plugin)
     {
         parent::__construct("bounty", "View all bounty subcommands", "/bounty help", ["b", "bounties"]);
         $this->setPermission("advancedbounty.default");
+        $this->plugin = $plugin;
     }
 
     /**
@@ -168,5 +172,9 @@ class BountyCommand extends Command
         }
 
         return true;
+    }
+
+    public function getOwningPlugin() : Loader {
+        return $this->plugin;
     }
 }
