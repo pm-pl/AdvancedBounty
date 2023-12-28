@@ -23,7 +23,6 @@ class Loader extends PluginBase {
 
         if (!$bedrockEconomy == null) {
             $this->getLogger()->notice("BedrockEconomy found. Enabling AdvancedBounty.");
-            $this->getLogger()->notice("BedrockEconomy found. Enabling AdvancedBounty.");
             $this->registerListeners();
 
             $this->saveResource("messages.yml");
