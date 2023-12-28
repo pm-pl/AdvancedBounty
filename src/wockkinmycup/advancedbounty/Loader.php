@@ -23,20 +23,15 @@ class Loader extends PluginBase {
 
         if (!$bedrockEconomy == null) {
             $this->getLogger()->notice("BedrockEconomy found. Enabling AdvancedBounty.");
-            return;
+            $this->getLogger()->notice("BedrockEconomy found. Enabling AdvancedBounty.");
+            $this->registerListeners();
+
+            $this->saveResource("messages.yml");
+            $this->saveResource("data/bounty.json");
+
+            $this->saveDefaultConfig();
+            $this->registerCommands();        
         }
-        $this->registerListeners();
-        foreach ($this->getResources() as $resource) {
-            $this->saveResource($resource->getFilename());
-        }
-        $resourceSubdirectory = "data/";
-        $resourceFiles = glob($this->getFile() . "resources/" . $resourceSubdirectory . "*");
-        foreach ($resourceFiles as $resourceFile) {
-            $resourceName = basename($resourceFile);
-            $this->saveResource($resourceSubdirectory . $resourceName);
-        }
-        $this->saveDefaultConfig();
-        $this->registerCommands();
     }
 
     public function registerCommands() {
