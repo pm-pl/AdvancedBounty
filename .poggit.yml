@@ -1,4 +1,4 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/iLVOEWOCK/AdvancedBounty
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/ecstsylove/AdvancedBounty
 build-by-default: true
 branches:
 - main
